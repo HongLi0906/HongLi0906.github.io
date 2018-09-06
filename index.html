@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>发票抬头</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <div class="content">
+    <div class="top_t">单位发票抬头</div>
+    <ul>
+	<li>
+        <span class="item-title">单位名称</span>
+        <span class="item-content">南昌市雲庭文化传媒有限公司</span>
+      </li>
+      <li>
+        <span class="item-title">单位地址</span>
+        <span class="item-content">江西省南昌市红谷滩新区红谷中大道1619号南昌国际金融大厦E栋1206室12层</span>
+      </li>
+      <li>
+        <span class="item-title">主要经营</span>
+        <span class="item-content">国内广告设计制作代理、发布：文化艺术交流活动策划：企业形象策划：企业管理咨询：会展会务服务：礼仪庆典活动策划：电脑图文设计、制作：市场营销策划：建筑装饰工程（以上项目国家有专项规定的凭许可证、资质证或其他批文件经营）</span>
+      </li>
+      <li>
+        <span class="item-title">税号</span>
+        <span class="item-content">91360125071845692T</span>
+      </li>
+      <li>
+        <span class="item-title">电话号码</span>
+        <span class="item-content">15070878888</span>
+      </li>
+      <li>
+        <span class="item-title">开户银行</span>
+        <span class="item-content">招商银行股份有限公司南昌红谷滩支行</span>
+      </li>
+      <li>
+        <span class="item-title">银行账户</span>
+        <span class="item-content">7919 0561 1710 909</span>
+      </li>
+    </ul>
+    <div>
+      <div id="qrcode"></div>
+      <p class="title">开票时候出示</span>
+    </div>
+  </div>
+  </div>
+</body>
+<script src="js/index.js"></script>
+<script>
+  var url = location.href;
+  var qrcode = new QRCode("qrcode", {
+    text: url,
+    width: 150,
+    height: 150,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+</script>
+
+</html>
